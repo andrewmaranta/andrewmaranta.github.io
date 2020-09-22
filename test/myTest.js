@@ -1,1 +1,1 @@
-gsap.to(".myClass", {duration: 10, opacity: 0.3});
+TweenLite.to(".myClass", {duration: 10, opacity: 0.3});
