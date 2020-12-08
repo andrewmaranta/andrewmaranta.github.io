@@ -1,11 +1,11 @@
-.scrollarea-btn:after {
+div.scrollarea-btn:after {
 
 left: 5px;
 width: 20px;
 
 }
 
-.scrollarea-scrollbar:after {
+div.scrollarea-scrollbar:after {
 
 left: 5px;
 width: 20px;
