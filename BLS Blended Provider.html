@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>BLS Blended Provider</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+ 
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+         <div class=" column" style="margin-top: 10%">
+            <a class="button button-primary" href="start.html">Back</a>
+         </br>
+         </br>
+          <h4>BLS Blended Provider Videos</h4>
+   <div>
+   <div class="row">
+            <div class="one-third column">
+        <a class="button" onClick="myFunction('v1')">Open/Close</a>
+        <a class="button" onClick="myFunction('v2')">Open/Close</a>
+        <a class="button" onClick="myFunction('v1')">Open/Close</a>
+        <a class="button" onClick="myFunction('v1')">Open/Close</a>
+        <a class="button" onClick="myFunction('v1')">Open/Close</a>
+        <a class="button" onClick="myFunction('v1')">Open/Close</a>
+        <a class="button" onClick="myFunction('v1')">Open/Close</a>
+        <a class="button" onClick="myFunction('v1')">Open/Close</a>
+            </div>
+
+
+         <div class="two-thirds column">
+
+         <video id="v1" width="640" height="360" style= "display: none;" controls>
+         <source type="video/mp4" src="sample1.mp4">
+         <track default kind="subtitles"  srclang="en"      src="Introduction.vtt" />
+          Sorry, your browser doesn't support embedded videos.
+         </video>
+
+         <video id="v2" width="640" height="360" style= "display: none;" controls>
+         <source type="video/mp4" src="sample2.mp4">
+         </video>
+
+         </div>
+   </div>
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<script>
+var openVideo ="";
+function myFunction(myDiv) {
+  var x = document.getElementById(myDiv);
+  var y = document.getElementById(openVideo);
+
+  if (x.style.display == "none") {
+  //if openVideo isn't null then close the open video
+  if(y != null){
+    y.pause();
+    y.style.display = "none";
+    }
+    // then open the next video
+    x.style.display = "block";
+    openVideo = myDiv;
+  } else if(myDiv != openVideo) {
+  // if is open then close it
+    x.pause();
+    x.style.display = "none";
+  }
+}
+</script>
+</html>
